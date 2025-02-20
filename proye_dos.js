@@ -14,6 +14,7 @@ document.querySelector(".target-circle").addEventListener("click", function(even
 
     audio.play();
 
+    
     balas--;
     actualizarContador();
 
