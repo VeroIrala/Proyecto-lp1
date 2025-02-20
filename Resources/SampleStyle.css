@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-image: url('../res_ev.jpg'); 
+    background-size: cover;
+    background-position: center top -117px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Div que representa el área del círculo */
+.target-circle {
+    position: absolute;
+    width: 140px; /* Ajusta el tamaño al círculo en la imagen */
+    height: 140px; /* Ajusta el tamaño al círculo en la imagen */
+    border-radius: 50%;
+    top: 480px; /* Ajusta la posición al círculo real */
+    left: 1070px;
+    background-color: rgba(185, 52, 52, 0.726); /* Rojo semitransparente para pruebas */
+    cursor: pointer;
+}
+
