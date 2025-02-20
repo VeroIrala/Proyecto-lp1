@@ -12,6 +12,8 @@ body {
     align-items: center;
 }
 
+#contador { font-size: 2em; margin-top: 20px; }
+
 /* Div que representa el área del círculo */
 .target-circle {
     position: absolute;
