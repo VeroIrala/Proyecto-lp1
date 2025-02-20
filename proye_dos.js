@@ -4,3 +4,5 @@ document.querySelector(".target-circle").addEventListener("click", function(even
     const audio = document.getElementById('audio');
     audio.play();
 });
+
+
