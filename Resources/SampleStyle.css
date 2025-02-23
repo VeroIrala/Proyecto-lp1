@@ -11,9 +11,34 @@ body {
     justify-content: center;
     align-items: center;
 }
+@font-face {
+    font-family: 'Digital7';
+    src: url('../DS-DIGII.TTF') format('truetype'); /* le agregue la fuente al contador numerico */
+}
+
+#contador .texto {
+    display: none; /* O puedes usar display: none; para eliminarlo completamente */
+}
+
+#contador .numero { 
+    pointer-events: none;
+    font-family: 'Digital7', sans-serif; /* Aca aplicamos la fuente */
+    font-size: 5em; margin-top: 20px;
+    color: #e7e5e5;
+    position: absolute;
+    top: 509px;
+    left: 1120px;
+    margin-top: 20px;
+}
+
+#mensaje {
+    color: rgb(233, 234, 235);
+    font-size: 2em;
 
 
-#contador { font-size: 2em; margin-top: 20px; }
+
+}
+
 
 /* Div que representa el área del círculo */
 .target-circle {
@@ -23,9 +48,11 @@ body {
     border-radius: 50%;
     top: 480px; /* Ajusta la posición al círculo real */
     left: 1070px;
-    background-color: rgba(185, 52, 52, 0.726); /* Rojo semitransparente para pruebas */
+    background-color: rgba(156, 149, 106, 0.801); /* Rojo semitransparente para pruebas */
     cursor: pointer;
 }
+
+
 
 
 
