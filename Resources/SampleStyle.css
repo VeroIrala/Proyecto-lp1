@@ -1,23 +1,24 @@
 body {
     margin: 0;
-    overflow: hidden;
+    overflow: hidden; /*Corta la imagen en caso que no quepe en la pantalla del navedagor*/
     background-image: url('../res_ev.jpg'); 
     background-size: cover;
     background-position: center top -117px;
-    background-attachment: fixed;
+    background-attachment: fixed; /*hace que la imagen de fondo quede fija*/
     background-repeat: no-repeat;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/*Se define la fuente a utilizarse en la pantalla*/
 @font-face {
     font-family: 'Digital7';
-    src: url('../DS-DIGII.TTF') format('truetype'); /* le agregue la fuente al contador numerico */
+    src: url('../DS-DIGII.TTF') format('truetype'); 
 }
 
 #contador .texto {
-    display: none; /* O puedes usar display: none; para eliminarlo completamente */
+    display: none; /* ocultamos el texto de la pantalla para que quede solo, el numero */
 }
 
 #contador .numero { 

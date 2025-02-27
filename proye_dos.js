@@ -1,14 +1,20 @@
+//Se definen las variables
 let balas = 10;
 const max_balas = 10;  
 
+//Se muestra en la pantalla llamando al elemento con sus respectivos id definido en html
 const contadorElemento = document.getElementById ("contador").querySelector(".numero");
 const audio = document.getElementById('audio');
 const recarga = document.getElementById('recarga');
+const detras = document.getElementById('detras');
 
+//Se activa la funcion para actualizar la cantidad de balas 
 function actualizarContador() {
+    //Aquí le añado cadenas de texto al numero y le añado la opcion que se mantenga en dos digitos siempre
     contadorElemento.textContent = balas.toString().padStart(2, '0'); 
 }
 
+//Defino un evento para presionar la tecla "a" y si las balas son menores al maximo las recarga
 document.addEventListener('keydown', function(event) {
     if (event.key === 'a' || event.key === 'A') { // Verifica si la tecla "a" es presionada
         if (balas < max_balas) {
@@ -20,19 +26,22 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+//Se ejecuta la funcion del clic sobre el target circle
 document.querySelector(".target-circle").addEventListener("click", function(event) {
      
-    if (balas > 0) {
+    if (balas > 0) { //Verifica si hay balas disponibles
 
-    audio.play();
+        audio.play(); //Reproduce el sonido 
 
-    
-    balas--;
-    actualizarContador();
+        balas--; //Disminuye la cantidad de balas del contador
+        actualizarContador();
 
-    document.getElementById("mensaje").textContent = "";
+        //Elimina el mensaje de "sin municion" en caso de que haya balas
+        document.getElementById("mensaje").textContent = "";
     } else {
-        document.getElementById("mensaje").textContent = "¡SIN MUNICION!"
+        //Si no hay balas disponibles muestra el mensaje
+        document.getElementById("mensaje").textContent = "¡SIN MUNICION!";
+        detras.play();
     }
 });
 
